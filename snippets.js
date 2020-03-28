@@ -28,3 +28,27 @@ function equalCard() {
     }
     equalCard();
 //_______________________________
+//_________slider________________
+ let link = "";
+             let images=new Array();
+            {% for item in slider_data %}
+
+                link= "{{item.image.url}}";
+                images.push(link)
+                
+            {%endfor%}
+				
+                images.forEach(element => console.log(element));
+
+                var nextimage=0;
+                doSlideshow();
+
+                function doSlideshow(){
+                   if(nextimage>=images.length){nextimage=0;}
+                   $('#spotlight')
+                   .css('background-image','url("'+images[nextimage++]+'")')
+                   .fadeIn(1000,function(){
+                           setTimeout(doSlideshow,5000);
+                   });
+                }
+ //________________________
