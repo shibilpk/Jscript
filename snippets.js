@@ -6,7 +6,7 @@ $('#id_description').keyup(function() {
     });
 // _________________________________
 // To element height
-
+```
 function equalCard() {
         let ids = [
             '#similar div.bottom div.item a.thumb .content h4',
@@ -27,6 +27,7 @@ function equalCard() {
 
     }
     equalCard();
+```
 //_______________________________
 //_________slider________________
  let link = "";
